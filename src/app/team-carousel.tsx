@@ -1,5 +1,5 @@
 "use client";
-import teamNameBg from "assets/team-name-bg.png";
+import teamNameBg from "@/assets/team-name-bg.png";
 import People1 from "@/assets/team/1.png";
 import People10 from "@/assets/team/10.png";
 import People11 from "@/assets/team/11.png";
