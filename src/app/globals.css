@@ -46,7 +46,7 @@
 }
 
 body {
-  @apply text-black
+  @apply text-black overflow-y-auto overflow-x-hidden
 }
 
 h1 {
