@@ -1,6 +1,6 @@
+import { join } from "path";
 import { readFile } from "fs/promises";
 import { type NextRequest } from "next/server";
-import { join } from "path";
 import { mail } from "services/mail";
 
 export async function POST(req: NextRequest) {
@@ -24,15 +24,16 @@ export async function POST(req: NextRequest) {
 
 		await mail.transporter.sendMail({
 			to: "",
-			from: { name: "Message from Website", address: process.env.MAIL || '' },
+			from: { name: "Message from Website", address: process.env.MAIL || "" },
 			replyTo: data.email,
 			subject: `Website: ${theme}`,
 			html: htmlTemplate,
 		});
 		return Response.json({ status: "sended" });
-	} catch (err: any) {
+	} catch (err) {
+		const e = err as { message: string };
 		return Response.json(
-			{ error: { statusCode: 500, message: err.message } },
+			{ error: { statusCode: 500, message: e.message } },
 			{ status: 500 },
 		);
 	}

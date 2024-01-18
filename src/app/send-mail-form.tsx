@@ -2,11 +2,11 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "components/ui/button";
 import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormMessage,
+	Form,
+	FormControl,
+	FormField,
+	FormItem,
+	FormMessage,
 } from "components/ui/form";
 import { Input, InputMask } from "components/ui/input";
 import { Send } from "lucide-react";
@@ -57,61 +57,61 @@ export const SendMailForm = () => {
 					"pointer-events-none opacity-60": loading,
 				})}
 			>
-					<FormField
-						control={form.control}
-						name="name"
-						render={({ field }) => (
-							<FormItem className="w-full">
-								<FormControl>
-									<Input
-										placeholder="Nome Completo*"
-										className="w-full"
-										{...field}
-									/>
-								</FormControl>
-								<FormMessage />
-							</FormItem>
-						)}
-					/>
+				<FormField
+					control={form.control}
+					name="name"
+					render={({ field }) => (
+						<FormItem className="w-full">
+							<FormControl>
+								<Input
+									placeholder="Nome Completo*"
+									className="w-full"
+									{...field}
+								/>
+							</FormControl>
+							<FormMessage />
+						</FormItem>
+					)}
+				/>
 
-					<FormField
-						control={form.control}
-						name="phone"
-						render={({ field }) => (
-							<FormItem className="w-full">
-								<FormControl>
-									<InputMask
-										mask="+55 (99) 99999-9999"
-										showMask={false}
-										placeholder="WhatsApp*"
-										className="w-full"
-										{...field}
-									/>
-								</FormControl>
-								<FormMessage />
-							</FormItem>
-						)}
-					/>
+				<FormField
+					control={form.control}
+					name="phone"
+					render={({ field }) => (
+						<FormItem className="w-full">
+							<FormControl>
+								<InputMask
+									mask="+55 (99) 99999-9999"
+									showMask={false}
+									placeholder="WhatsApp*"
+									className="w-full"
+									{...field}
+								/>
+							</FormControl>
+							<FormMessage />
+						</FormItem>
+					)}
+				/>
 
-          <FormField
-						control={form.control}
-						name="email"
-						render={({ field }) => (
-							<FormItem className="w-full">
-								<FormControl>
-									<Input
-										placeholder="Endereço de Email*"
-										className="w-full"
-                    type="email"
-										{...field}
-									/>
-								</FormControl>
-								<FormMessage />
-							</FormItem>
-						)}
-					/>
+				<FormField
+					control={form.control}
+					name="email"
+					render={({ field }) => (
+						<FormItem className="w-full">
+							<FormControl>
+								<Input
+									placeholder="Endereço de Email*"
+									className="w-full"
+									type="email"
+									{...field}
+								/>
+							</FormControl>
+							<FormMessage />
+						</FormItem>
+					)}
+				/>
 
-          {/* <FormField
+				{/* <FormField
 					control={form.control}
 					name="message"
 					render={({ field }) => (
