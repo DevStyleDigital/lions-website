@@ -1,11 +1,11 @@
 "use client";
-import Case1 from "assets/cases/1.png";
-import Case2 from "assets/cases/2.png";
-import Case3 from "assets/cases/3.png";
-import Case4 from "assets/cases/4.png";
-import Case5 from "assets/cases/5.png";
-import Case6 from "assets/cases/6.png";
-import Case7 from "assets/cases/7.png";
+import Case1 from "@/assets/cases/1.png";
+import Case2 from "@/assets/cases/2.png";
+import Case3 from "@/assets/cases/3.png";
+import Case4 from "@/assets/cases/4.png";
+import Case5 from "@/assets/cases/5.png";
+import Case6 from "@/assets/cases/6.png";
+import Case7 from "@/assets/cases/7.png";
 import {
 	Carousel,
 	CarouselContent,
