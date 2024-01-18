@@ -1,25 +1,25 @@
 "use client";
 import teamNameBg from "assets/team-name-bg.png";
-import People1 from "assets/team/1.png";
-import People10 from "assets/team/10.png";
-import People11 from "assets/team/11.png";
-import People12 from "assets/team/12.png";
-import People13 from "assets/team/13.png";
-import People2 from "assets/team/2.png";
-import People3 from "assets/team/3.png";
-import People4 from "assets/team/4.png";
-import People5 from "assets/team/5.png";
-import People6 from "assets/team/6.png";
-import People7 from "assets/team/7.png";
-import People8 from "assets/team/8.png";
-import People9 from "assets/team/9.png";
+import People1 from "@/assets/team/1.png";
+import People10 from "@/assets/team/10.png";
+import People11 from "@/assets/team/11.png";
+import People12 from "@/assets/team/12.png";
+import People13 from "@/assets/team/13.png";
+import People2 from "@/assets/team/2.png";
+import People3 from "@/assets/team/3.png";
+import People4 from "@/assets/team/4.png";
+import People5 from "@/assets/team/5.png";
+import People6 from "@/assets/team/6.png";
+import People7 from "@/assets/team/7.png";
+import People8 from "@/assets/team/8.png";
+import People9 from "@/assets/team/9.png";
 import {
 	Carousel,
 	CarouselContent,
 	CarouselItem,
 	CarouselNext,
 	CarouselPrevious,
-} from "components/ui/carousel";
+} from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
 

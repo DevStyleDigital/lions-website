@@ -1,7 +1,7 @@
 "use client";
 import { useInputMask } from "@code-forge/react-input-mask";
 import * as React from "react";
-import { cn } from "utils/cn";
+import { cn } from "@/utils/cn";
 
 export interface InputProps
 	extends React.InputHTMLAttributes<HTMLInputElement> {

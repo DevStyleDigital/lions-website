@@ -1,19 +1,19 @@
 "use client";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Button } from "components/ui/button";
+import { Button } from "@/components/ui/button";
 import {
 	Form,
 	FormControl,
 	FormField,
 	FormItem,
 	FormMessage,
-} from "components/ui/form";
-import { Input, InputMask } from "components/ui/input";
+} from "@/components/ui/form";
+import { Input, InputMask } from "@/components/ui/input";
 import { Send } from "lucide-react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
-import { cn } from "utils/cn";
+import { cn } from "@/utils/cn";
 import * as z from "zod";
 
 const profileFormSchema = z.object({

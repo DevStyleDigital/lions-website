@@ -1,5 +1,5 @@
-import { WhatsApp } from "assets/whatsapp";
-import { Dialog, DialogContent, DialogTrigger } from "components/ui/dialog";
+import { WhatsApp } from "@/assets/whatsapp";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Menu } from "lucide-react";
 import type { Metadata } from "next";
 import loadFont from "next/font/local";
@@ -7,7 +7,7 @@ import Link from "next/link";
 import Script from "next/script";
 import "./globals.css";
 import { Toast } from "./toast";
-import { Logo } from "assets/Logo";
+import { Logo } from "@/assets/Logo";
 
 const rocgrotesk = loadFont({
 	src: [
