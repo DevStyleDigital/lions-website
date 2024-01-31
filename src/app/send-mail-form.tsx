@@ -1,35 +1,24 @@
 "use client";
+import { WhatsApp } from "@/assets/whatsapp";
 import { Button } from "@/components/ui/button";
 import { Input, InputMask } from "@/components/ui/input";
 import { cn } from "@/utils/cn";
-import { zodResolver } from "@hookform/resolvers/zod";
 import { Facebook, Instagram, Linkedin, Mail, Send } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
-import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
-import * as z from "zod";
-import { WhatsApp } from "@/assets/whatsapp";
-
-const profileFormSchema = z.object({
-	name: z.string(),
-	email: z.string().email(),
-	phone: z.string(),
-	theme: z.string(),
-	message: z.string(),
-});
-
-type ProfileFormValues = z.infer<typeof profileFormSchema>;
 
 export const SendMailForm = () => {
 	const [loading, setLoading] = useState(false);
-	const form = useForm<ProfileFormValues>({
-		resolver: zodResolver(profileFormSchema),
-		mode: "onChange",
-	});
 
-	function onSubmit(data: ProfileFormValues) {
+	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
+  function onSubmit(ev: any) {
 		setLoading(true);
+    const data = {
+      name: ev.currentTarget.name.value,
+      phone: ev.currentTarget.phone.value,
+      email: ev.currentTarget.email.value,
+    }
 
 		fetch("/api/send", { body: JSON.stringify(data), method: "POST" })
 			.then((res) => {
@@ -46,7 +35,7 @@ export const SendMailForm = () => {
 
 	return (
 		<form
-			onSubmit={form.handleSubmit(onSubmit)}
+			onSubmit={onSubmit}
 			className={cn(
 				"w-full md:max-w-xl flex flex-col space-y-8 max-md:bg-[#F7732E] sm:px-8 px-4 max-md:py-10 max-md:pb-20",
 				{
@@ -58,7 +47,7 @@ export const SendMailForm = () => {
 				<b>Entre em contato</b>
 			</h2>
 
-			<Input required placeholder="Nome Completo*" className="w-full !mt-4" />
+			<Input required placeholder="Nome Completo*" name="name" className="w-full !mt-4" />
 
 			<InputMask
 				mask={[
@@ -79,6 +68,7 @@ export const SendMailForm = () => {
 					/\d/,
 				]}
 				required
+        name="phone"
 				showMask={false}
 				placeholder="WhatsApp*"
 				className="w-full"
@@ -86,6 +76,7 @@ export const SendMailForm = () => {
 
 			<Input
 				required
+        name="email"
 				placeholder="Endereço de Email*"
 				className="w-full"
 				type="email"
