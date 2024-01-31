@@ -4,21 +4,26 @@ import LionManBg from "@/assets/bg-lion-man.png";
 import casesBg from "@/assets/cases-bg.png";
 import { clients } from "@/assets/clients";
 import ClientsBg from "@/assets/clients-bg.png";
+import ContactBg from "@/assets/contact-bg.jpg";
 import HeroBg from "@/assets/hero-bg.png";
 import LionMan from "@/assets/lion-man.png";
 import Lion from "@/assets/lion.png";
 import TeamVetor from "@/assets/team-vetor.png";
+import { Input, InputMask } from "@/components/ui/input";
 import Image from "next/image";
 import { CasesCarousel } from "./cases-carousel";
 import { TeamCarousel } from "./team-carousel";
+import { SendMailForm } from "./send-mail-form";
+import { Vector } from "../assets/vector";
 
 const Page = () => {
 	return (
 		<main>
 			<section className="relative" id="home">
-				<div className="max-w-screen-xl mx-auto">
+				<div className="max-w-screen-xl mx-auto sm:px-12">
 					<div className="absolute z-10 top-1/2 -translate-y-1/2 max-lg:text-center max-lg:left-1/2 max-lg:-translate-x-1/2">
-						<h1 className="font-bold">
+						<h1 className="font-bold relative sm:text-7xl min-[540px]:text-6xl text-4xl">
+              <Vector aria-hidden className="absolute top-0 left-0 -translate-x-[4vw] -translate-y-[8vw] lg:-translate-x-20 lg:-translate-y-20 lg:w-32 lg:h-32 w-[12vw] h-[12vw]"/>
 							Lions Brazil
 							<br /> Comunicação
 						</h1>
@@ -37,7 +42,7 @@ const Page = () => {
 					/>
 					<hr
 						aria-hidden
-						className="border-transparent border-b-white border max-w-screen-xl w-[calc(100%-2rem)] h-0 bottom-40 absolute left-[calc(50%+1rem)] -translate-x-1/2"
+						className="border-transparent border-b-white border max-w-screen-xl w-full h-0 bottom-40 absolute left-1/2 -translate-x-1/2"
 					/>
 					<Image
 						priority
@@ -84,11 +89,11 @@ const Page = () => {
 			<section className="relative">
 				<div className="max-w-screen-xl mx-auto">
 					<div className="absolute lg:max-w-[50%] sm:px-8 px-4 max-lg:text-center max-lg:left-0 text-white z-10 top-1/2 -translate-y-1/2">
-						<h1>
+						<h2 className="large">
 							Comprometimento
 							<br /> e talento <b>destacando</b> <br />
 							sua marca
-						</h1>
+						</h2>
 						<p className="mt-4">
 							Acreditamos que uma Agência moderna deve entender os desafios
 							atuais da comunicação e ter capacidade de oferecer soluções à
@@ -119,9 +124,9 @@ const Page = () => {
 					alt=""
 				/>
 				<div className="text-center flex flex-col text-white w-full">
-					<h1 className="text-4xl pt-20">
+					<h2 className="text-4xl pt-20">
 						Time<b>LIONS</b>
-					</h1>
+					</h2>
 					<TeamCarousel />
 				</div>
 			</section>
@@ -133,9 +138,9 @@ const Page = () => {
 					alt=""
 				/>
 				<div className="text-center flex flex-col w-full max-w-screen-xl mx-auto sm:pb-64 pb-32">
-					<h1 className="text-4xl pt-20 text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">
+					<h2 className="text-4xl pt-20 text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">
 						Clientes <b>atendidos</b>
-					</h1>
+					</h2>
 					<ul className="flex flex-wrap justify-center mt-10">
 						{clients.map((image) => (
 							<li key={image[1]}>
@@ -153,10 +158,28 @@ const Page = () => {
 					alt=""
 				/>
 				<div className="text-center flex flex-col relative text-white w-full">
-					<h1 className="text-4xl pt-20">
+					<h2 className="text-4xl pt-20">
 						Cases de <b>Sucesso</b>
-					</h1>
+					</h2>
 					<CasesCarousel />
+				</div>
+			</section>
+			<section className="relative bg-black max-md:pt-10 max-md:text-center">
+				<div className="max-w-screen-2xl max-md:flex-col max-md:items-center w-full md:left-1/2 md:-translate-x-1/2 md:absolute justify-between max-lg:left-0 text-white z-10 md:top-1/2 md:-translate-y-1/2 flex">
+					<h2 className="max-xl:md:text-[5vw] sm:px-8 px-4 sm:text-7xl text-[8vw] w-full max-w-3xl max-md:mb-10">
+						Estamos Prontos para <b>construir</b> uma parceria
+						<br />
+						de <b>sucesso!</b>
+					</h2>
+					<SendMailForm />
+				</div>
+				<div className="relative h-[920px] max-md:hidden">
+					<Image
+						priority
+						className="object-cover h-full w-full"
+						src={ContactBg}
+						alt=""
+					/>
 				</div>
 			</section>
 		</main>

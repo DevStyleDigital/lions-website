@@ -1,9 +1,9 @@
 "use client";
 
 import {
-	type EmblaCarouselType as CarouselApi,
-	type EmblaOptionsType as CarouselOptions,
-	type EmblaPluginType as CarouselPlugin,
+    type EmblaCarouselType as CarouselApi,
+    type EmblaOptionsType as CarouselOptions,
+    type EmblaPluginType as CarouselPlugin,
 } from "embla-carousel";
 import useEmblaCarousel from "embla-carousel-react";
 import * as React from "react";
@@ -277,8 +277,8 @@ const CarouselPrevious = React.forwardRef<
 						y2="39.5"
 						gradientUnits="userSpaceOnUse"
 					>
-						<stop stop-color="#FD9141" />
-						<stop offset="1" stop-color="#F76B32" />
+						<stop stopColor="#FD9141" />
+						<stop offset="1" stopColor="#F76B32" />
 					</linearGradient>
 				</defs>
 			</svg>
@@ -333,8 +333,8 @@ const CarouselNext = React.forwardRef<
 						y2="39.5"
 						gradientUnits="userSpaceOnUse"
 					>
-						<stop stop-color="#FD9141" />
-						<stop offset="1" stop-color="#F76B32" />
+						<stop stopColor="#FD9141" />
+						<stop offset="1" stopColor="#F76B32" />
 					</linearGradient>
 				</defs>
 			</svg>
@@ -345,10 +345,11 @@ const CarouselNext = React.forwardRef<
 CarouselNext.displayName = "CarouselNext";
 
 export {
-	Carousel,
-	CarouselContent,
-	CarouselItem,
-	CarouselNext,
-	CarouselPrevious,
-	type CarouselApi,
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
+    type CarouselApi
 };
+

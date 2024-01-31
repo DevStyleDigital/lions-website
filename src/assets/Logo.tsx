@@ -8,7 +8,7 @@ export const Logo = (props: { className?: string }) => (
     {...props}
 	>
     <title>Lions Brazil - comunicação</title>
-		<g clip-path="url(#clip0_80_162)">
+		<g clipPath="url(#clip0_80_162)">
 			<mask
 				id="mask0_80_162"
 				style={{ maskType: "luminance" }}

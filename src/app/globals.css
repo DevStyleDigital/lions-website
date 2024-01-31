@@ -49,7 +49,7 @@ body {
   @apply text-black overflow-y-auto overflow-x-hidden
 }
 
-h1 {
+h1, h2.large {
   @apply lg:text-7xl text-3xl md:text-5xl leading-[0.9]
 }
 

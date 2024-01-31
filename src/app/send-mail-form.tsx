@@ -1,20 +1,15 @@
 "use client";
-import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@/components/ui/button";
-import {
-	Form,
-	FormControl,
-	FormField,
-	FormItem,
-	FormMessage,
-} from "@/components/ui/form";
 import { Input, InputMask } from "@/components/ui/input";
-import { Send } from "lucide-react";
+import { cn } from "@/utils/cn";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { Facebook, Instagram, Linkedin, Mail, Send } from "lucide-react";
+import Link from "next/link";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
-import { cn } from "@/utils/cn";
 import * as z from "zod";
+import { WhatsApp } from "@/assets/whatsapp";
 
 const profileFormSchema = z.object({
 	name: z.string(),
@@ -50,68 +45,53 @@ export const SendMailForm = () => {
 	}
 
 	return (
-		<Form {...form}>
-			<form
-				onSubmit={form.handleSubmit(onSubmit)}
-				className={cn("flex flex-col gap-8 mt-16", {
+		<form
+			onSubmit={form.handleSubmit(onSubmit)}
+			className={cn(
+				"w-full md:max-w-xl flex flex-col space-y-8 max-md:bg-[#F7732E] sm:px-8 px-4 max-md:py-10 max-md:pb-20",
+				{
 					"pointer-events-none opacity-60": loading,
-				})}
-			>
-				<FormField
-					control={form.control}
-					name="name"
-					render={({ field }) => (
-						<FormItem className="w-full">
-							<FormControl>
-								<Input
-									placeholder="Nome Completo*"
-									className="w-full"
-									{...field}
-								/>
-							</FormControl>
-							<FormMessage />
-						</FormItem>
-					)}
-				/>
+				},
+			)}
+		>
+			<h2 className="text-4xl text-center md:w-fit">
+				<b>Entre em contato</b>
+			</h2>
 
-				<FormField
-					control={form.control}
-					name="phone"
-					render={({ field }) => (
-						<FormItem className="w-full">
-							<FormControl>
-								<InputMask
-									mask="+55 (99) 99999-9999"
-									showMask={false}
-									placeholder="WhatsApp*"
-									className="w-full"
-									{...field}
-								/>
-							</FormControl>
-							<FormMessage />
-						</FormItem>
-					)}
-				/>
+			<Input required placeholder="Nome Completo*" className="w-full !mt-4" />
 
-				<FormField
-					control={form.control}
-					name="email"
-					render={({ field }) => (
-						<FormItem className="w-full">
-							<FormControl>
-								<Input
-									placeholder="Endereço de Email*"
-									className="w-full"
-									type="email"
-									{...field}
-								/>
-							</FormControl>
-							<FormMessage />
-						</FormItem>
-					)}
-				/>
+			<InputMask
+				mask={[
+					"(",
+					/\d/,
+					/\d/,
+					")",
+					" ",
+					"9",
+					/\d/,
+					/\d/,
+					/\d/,
+					/\d/,
+					"-",
+					/\d/,
+					/\d/,
+					/\d/,
+					/\d/,
+				]}
+				required
+				showMask={false}
+				placeholder="WhatsApp*"
+				className="w-full"
+			/>
 
-				{/* <FormField
+			<Input
+				required
+				placeholder="Endereço de Email*"
+				className="w-full"
+				type="email"
+			/>
+
+			{/* <FormField
 					control={form.control}
 					name="message"
 					render={({ field }) => (
@@ -123,13 +103,37 @@ export const SendMailForm = () => {
 						</FormItem>
 					)}
 				  /> */}
-				<Button
-					variant="outline"
-					className="text-primary w-fit self-center px-8"
-				>
-					Enviar <Send className="w-4 h-4 ml-2 mt-1" />
-				</Button>
-			</form>
-		</Form>
+			<Button size="lg" className="">
+				Enviar <Send className="w-6 h-6 ml-4 mb-1 mt-1" />
+			</Button>
+
+			<ul className="flex items-center flex-wrap max-md:justify-center gap-4">
+				<li>
+					<Link className="bg-black rounded-full p-3 flex items-center justify-center" href="">
+						<WhatsApp className="w-6 h-6" />
+					</Link>
+				</li>
+				<li>
+					<Link className="bg-black rounded-full p-3 flex items-center justify-center" href="">
+            <Facebook className="w-6 h-6" />
+					</Link>
+				</li>
+				<li>
+					<Link className="bg-black rounded-full p-3 flex items-center justify-center" href="">
+            <Instagram className="w-6 h-6" />
+					</Link>
+				</li>
+				<li>
+					<Link className="bg-black rounded-full p-3 flex items-center justify-center" href="">
+            <Linkedin className="w-6 h-6" />
+					</Link>
+				</li>
+				<li>
+					<Link className="bg-black rounded-full p-3 flex items-center justify-center" href="">
+						<Mail className="w-6 h-6" />
+					</Link>
+				</li>
+			</ul>
+		</form>
 	);
 };

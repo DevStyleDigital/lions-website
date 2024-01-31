@@ -1,12 +1,13 @@
 "use client";
-import { useInputMask } from "@code-forge/react-input-mask";
-import * as React from "react";
 import { cn } from "@/utils/cn";
+import * as React from "react";
+import MaskedInput, { type Mask } from 'react-text-mask';
 
 export interface InputProps
 	extends React.InputHTMLAttributes<HTMLInputElement> {
 	error?: boolean;
 	render?: React.ReactNode;
+  containerClassName?: string;
 	labelClassName?: string;
 	help?: string;
 	icons?: [
@@ -17,18 +18,18 @@ export interface InputProps
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
   (
-    { className, help, value, labelClassName, render, type, error, icons, ...props },
+    { className, help, value, containerClassName, labelClassName, render, type, error, icons, ...props },
     ref,
   ) => {
     return (
-      <div className="flex flex-col h-fit w-full relative group text-primary-foreground">
+      <div className={cn("flex flex-col h-fit w-full relative group text-primary-foreground", containerClassName)}>
         {render ? (
           render
         ) : (
           <input
             className={cn(
               error && '!border-destructive',
-              'peer text-base text-primary-foreground/70 flex w-full border-b-2 border-b-slate-600 focus:border-b-slate-400 outline-none py-4 bg-transparent file:border-0 file:text-sm file:font-medium placeholder:text-transparent disabled:cursor-not-allowed disabled:opacity-50',
+              'peer text-white flex w-full border-[3px] rounded-full px-8 text-lg border-white/80 focus:border-white outline-none py-4 bg-transparent placeholder:text-white/60 file:border-0 file:text-sm file:font-medium disabled:cursor-not-allowed disabled:opacity-50',
               className,
               {
                 'pl-12': !!icons?.[0],
@@ -62,32 +63,25 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
 Input.displayName = "Input";
 
 const InputMask = React.forwardRef<
-	HTMLInputElement,
-	InputProps & { mask: string; showMask?: boolean }
+  HTMLInputElement,
+  InputProps & { mask: Mask; showMask?: boolean }
 >(({ mask, error, showMask, ...props }, ref) => {
-	const { getInputProps } = useInputMask({
-		mask: mask,
-		placeholderChar: showMask ? undefined : "  ",
-	});
-
-	return (
-		<Input
-			error={error}
-			{...props}
-			ref={ref}
-			onChange={() => {}}
-			value={
-				getInputProps().value === mask.replaceAll("9", "  ")
-					? ""
-					: getInputProps().value
-			}
-			onKeyDown={(ev) => {
-				const handle = getInputProps().onKeyDown;
-				if (handle) handle(ev);
-			}}
-		/>
-	);
+  return (
+    <MaskedInput
+      mask={mask}
+      guide={showMask}
+      ref={ref as (instance: MaskedInput | null) => void}
+      {...props}
+      render={(innerRef, inputProps) => (
+        <Input
+          ref={innerRef as (instance: HTMLInputElement | null) => void}
+          error={error}
+          {...inputProps}
+        />
+      )}
+    />
+  );
 });
-InputMask.displayName = "InputMask";
+InputMask.displayName = 'InputMask';
 
 export { Input, InputMask };

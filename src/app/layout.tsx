@@ -11,9 +11,8 @@ import { Logo } from "@/assets/Logo";
 
 const rocgrotesk = loadFont({
 	src: [
-		{ path: "./rocgrotesk-black.woff2", weight: "800", style: "normal" },
-		{ path: "./rocgrotesk-bold.woff2", weight: "700", style: "normal" },
-		{ path: "./rocgrotesk-regular.woff2", weight: "400", style: "normal" },
+		{ path: "./rocgrotesk-bold.ttf", weight: "700", style: "normal" },
+		{ path: "./rocgrotesk-regular.ttf", weight: "400", style: "normal" },
 	],
 });
 
