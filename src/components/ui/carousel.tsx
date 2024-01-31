@@ -1,9 +1,9 @@
 "use client";
 
 import {
-    type EmblaCarouselType as CarouselApi,
-    type EmblaOptionsType as CarouselOptions,
-    type EmblaPluginType as CarouselPlugin,
+	type EmblaCarouselType as CarouselApi,
+	type EmblaOptionsType as CarouselOptions,
+	type EmblaPluginType as CarouselPlugin,
 } from "embla-carousel";
 import useEmblaCarousel from "embla-carousel-react";
 import * as React from "react";
@@ -317,7 +317,7 @@ const CarouselNext = React.forwardRef<
 				viewBox="0 0 21 39"
 				fill="none"
 				xmlns="http://www.w3.org/2000/svg"
-        className="rotate-180"
+				className="rotate-180"
 			>
 				<title>{""}</title>
 				<path
@@ -345,11 +345,10 @@ const CarouselNext = React.forwardRef<
 CarouselNext.displayName = "CarouselNext";
 
 export {
-    Carousel,
-    CarouselContent,
-    CarouselItem,
-    CarouselNext,
-    CarouselPrevious,
-    type CarouselApi
+	Carousel,
+	CarouselContent,
+	CarouselItem,
+	CarouselNext,
+	CarouselPrevious,
+	type CarouselApi,
 };
-

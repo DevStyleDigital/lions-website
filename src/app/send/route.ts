@@ -1,8 +1,6 @@
 import { type NextRequest } from "next/server";
 
-export async function POST(req: NextRequest) {
-
-}
+export async function POST(req: NextRequest) {}
 // import { join } from "path";
 // import { readFile } from "fs/promises";
 // import { mail } from "@/services/mail";

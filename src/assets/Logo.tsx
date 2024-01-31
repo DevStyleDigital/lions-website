@@ -5,9 +5,9 @@ export const Logo = (props: { className?: string }) => (
 		viewBox="0 0 1142 541"
 		fill="none"
 		xmlns="http://www.w3.org/2000/svg"
-    {...props}
+		{...props}
 	>
-    <title>Lions Brazil - comunicação</title>
+		<title>Lions Brazil - comunicação</title>
 		<g clipPath="url(#clip0_80_162)">
 			<mask
 				id="mask0_80_162"

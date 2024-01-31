@@ -1,13 +1,13 @@
 "use client";
 import { cn } from "@/utils/cn";
 import * as React from "react";
-import MaskedInput, { type Mask } from 'react-text-mask';
+import MaskedInput, { type Mask } from "react-text-mask";
 
 export interface InputProps
 	extends React.InputHTMLAttributes<HTMLInputElement> {
 	error?: boolean;
 	render?: React.ReactNode;
-  containerClassName?: string;
+	containerClassName?: string;
 	labelClassName?: string;
 	help?: string;
 	icons?: [
@@ -63,25 +63,25 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
 Input.displayName = "Input";
 
 const InputMask = React.forwardRef<
-  HTMLInputElement,
-  InputProps & { mask: Mask; showMask?: boolean }
+	HTMLInputElement,
+	InputProps & { mask: Mask; showMask?: boolean }
 >(({ mask, error, showMask, ...props }, ref) => {
-  return (
-    <MaskedInput
-      mask={mask}
-      guide={showMask}
-      ref={ref as (instance: MaskedInput | null) => void}
-      {...props}
-      render={(innerRef, inputProps) => (
-        <Input
-          ref={innerRef as (instance: HTMLInputElement | null) => void}
-          error={error}
-          {...inputProps}
-        />
-      )}
-    />
-  );
+	return (
+		<MaskedInput
+			mask={mask}
+			guide={showMask}
+			ref={ref as (instance: MaskedInput | null) => void}
+			{...props}
+			render={(innerRef, inputProps) => (
+				<Input
+					ref={innerRef as (instance: HTMLInputElement | null) => void}
+					error={error}
+					{...inputProps}
+				/>
+			)}
+		/>
+	);
 });
-InputMask.displayName = 'InputMask';
+InputMask.displayName = "InputMask";
 
 export { Input, InputMask };

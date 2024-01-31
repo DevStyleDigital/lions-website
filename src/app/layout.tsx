@@ -56,28 +56,38 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
 								<Link href="/#cases">Cases de Sucesso</Link>
 								<Link href="/#contact">Entre em Contato</Link>
 							</nav>
-              <DialogTrigger aria-hidden className="block lg:hidden p-4">
-                <Menu className="w-6 h-6" />
-              </DialogTrigger>
+							<DialogTrigger aria-hidden className="block lg:hidden p-4">
+								<Menu className="w-6 h-6" />
+							</DialogTrigger>
 
 							<DialogContent
 								aria-hidden
 								className="lg:hidden !w-screen !h-fit flex flex-col items-center"
 							>
 								<DialogTrigger asChild>
-                  <Link href="/#home" className="dialog-link">Home</Link>
+									<Link href="/#home" className="dialog-link">
+										Home
+									</Link>
 								</DialogTrigger>
 								<DialogTrigger asChild>
-                  <Link href="/#about" className="dialog-link">Quem Somos</Link>
+									<Link href="/#about" className="dialog-link">
+										Quem Somos
+									</Link>
 								</DialogTrigger>
 								<DialogTrigger asChild>
-                  <Link href="/#clients" className="dialog-link">Clientes Atendidos</Link>
+									<Link href="/#clients" className="dialog-link">
+										Clientes Atendidos
+									</Link>
 								</DialogTrigger>
 								<DialogTrigger asChild>
-                  <Link href="/#cases" className="dialog-link">Cases de Sucesso</Link>
+									<Link href="/#cases" className="dialog-link">
+										Cases de Sucesso
+									</Link>
 								</DialogTrigger>
 								<DialogTrigger asChild>
-                  <Link href="/#contact" className="dialog-link">Entre em Contato</Link>
+									<Link href="/#contact" className="dialog-link">
+										Entre em Contato
+									</Link>
 								</DialogTrigger>
 							</DialogContent>
 						</Dialog>

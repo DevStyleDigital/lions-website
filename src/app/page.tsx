@@ -23,7 +23,10 @@ const Page = () => {
 				<div className="max-w-screen-xl mx-auto sm:px-12">
 					<div className="absolute z-10 top-1/2 -translate-y-1/2 max-lg:text-center max-lg:left-1/2 max-lg:-translate-x-1/2">
 						<h1 className="font-bold relative sm:text-7xl min-[540px]:text-6xl text-4xl">
-              <Vector aria-hidden className="absolute top-0 left-0 -translate-x-[4vw] -translate-y-[8vw] lg:-translate-x-20 lg:-translate-y-20 lg:w-32 lg:h-32 w-[12vw] h-[12vw]"/>
+							<Vector
+								aria-hidden
+								className="absolute top-0 left-0 -translate-x-[4vw] -translate-y-[8vw] lg:-translate-x-20 lg:-translate-y-20 lg:w-32 lg:h-32 w-[12vw] h-[12vw]"
+							/>
 							Lions Brazil
 							<br /> Comunicação
 						</h1>

@@ -109,27 +109,42 @@ export const SendMailForm = () => {
 
 			<ul className="flex items-center flex-wrap max-md:justify-center gap-4">
 				<li>
-					<Link className="bg-black rounded-full p-3 flex items-center justify-center" href="">
+					<Link
+						className="bg-black rounded-full p-3 flex items-center justify-center"
+						href=""
+					>
 						<WhatsApp className="w-6 h-6" />
 					</Link>
 				</li>
 				<li>
-					<Link className="bg-black rounded-full p-3 flex items-center justify-center" href="">
-            <Facebook className="w-6 h-6" />
+					<Link
+						className="bg-black rounded-full p-3 flex items-center justify-center"
+						href=""
+					>
+						<Facebook className="w-6 h-6" />
 					</Link>
 				</li>
 				<li>
-					<Link className="bg-black rounded-full p-3 flex items-center justify-center" href="">
-            <Instagram className="w-6 h-6" />
+					<Link
+						className="bg-black rounded-full p-3 flex items-center justify-center"
+						href=""
+					>
+						<Instagram className="w-6 h-6" />
 					</Link>
 				</li>
 				<li>
-					<Link className="bg-black rounded-full p-3 flex items-center justify-center" href="">
-            <Linkedin className="w-6 h-6" />
+					<Link
+						className="bg-black rounded-full p-3 flex items-center justify-center"
+						href=""
+					>
+						<Linkedin className="w-6 h-6" />
 					</Link>
 				</li>
 				<li>
-					<Link className="bg-black rounded-full p-3 flex items-center justify-center" href="">
+					<Link
+						className="bg-black rounded-full p-3 flex items-center justify-center"
+						href=""
+					>
 						<Mail className="w-6 h-6" />
 					</Link>
 				</li>
