@@ -12,13 +12,13 @@ export const SendMailForm = () => {
 	const [loading, setLoading] = useState(false);
 
 	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
-  function onSubmit(ev: any) {
+	function onSubmit(ev: any) {
 		setLoading(true);
-    const data = {
-      name: ev.currentTarget.name.value,
-      phone: ev.currentTarget.phone.value,
-      email: ev.currentTarget.email.value,
-    }
+		const data = {
+			name: ev.currentTarget.name.value,
+			phone: ev.currentTarget.phone.value,
+			email: ev.currentTarget.email.value,
+		};
 
 		fetch("/api/send", { body: JSON.stringify(data), method: "POST" })
 			.then((res) => {
@@ -47,7 +47,12 @@ export const SendMailForm = () => {
 				<b>Entre em contato</b>
 			</h2>
 
-			<Input required placeholder="Nome Completo*" name="name" className="w-full !mt-4" />
+			<Input
+				required
+				placeholder="Nome Completo*"
+				name="name"
+				className="w-full !mt-4"
+			/>
 
 			<InputMask
 				mask={[
@@ -68,7 +73,7 @@ export const SendMailForm = () => {
 					/\d/,
 				]}
 				required
-        name="phone"
+				name="phone"
 				showMask={false}
 				placeholder="WhatsApp*"
 				className="w-full"
@@ -76,7 +81,7 @@ export const SendMailForm = () => {
 
 			<Input
 				required
-        name="email"
+				name="email"
 				placeholder="Endereço de Email*"
 				className="w-full"
 				type="email"
