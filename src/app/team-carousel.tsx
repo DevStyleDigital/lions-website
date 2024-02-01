@@ -58,7 +58,7 @@ export const TeamCarousel = () => {
 					<CarouselItem
 						index={i}
 						key={i.toString()}
-						className="md:basis-1/3 relative flex flex-col h-[70vh] sm:basis-1/2 lg:basis-1/3 xl:basis-1/4 items-center justify-end"
+						className="md:basis-1/3 relative flex flex-col h-[620px] sm:basis-1/2 lg:basis-1/3 xl:basis-1/4 items-center justify-end"
 					>
 						<Image
 							src={people.src}

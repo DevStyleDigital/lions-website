@@ -119,7 +119,7 @@ const Page = () => {
 					/>
 				</div>
 			</section>
-			<section className="relative bg-black h-screen">
+			<section className="relative bg-black min-h-[840px] h-screen">
 				<Image
 					priority
 					className="w-full h-[60%] top-20 object-cover object-top absolute z-0"
