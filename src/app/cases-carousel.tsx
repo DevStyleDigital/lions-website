@@ -25,24 +25,25 @@ export const CasesCarousel = () => {
 		>
 			<CarouselContent className="h-full">
 				{[
-					{ src: Case1, alt: "" },
-					{ src: Case2, alt: "" },
-					{ src: Case3, alt: "" },
-					{ src: Case4, alt: "" },
-					{ src: Case5, alt: "" },
-					{ src: Case6, alt: "" },
-					{ src: Case7, alt: "" },
+					{ src: Case1, alt: "Bella Make Store" },
+					{ src: Case2, alt: "Festa do Peão de Salto de Pirapora 2023" },
+					{ src: Case3, alt: "Humor exótico" },
+					{ src: Case4, alt: "Leiturança" },
+					{ src: Case5, alt: "Marcha Para Jesus" },
+					{ src: Case6, alt: "Rejoy" },
+					{ src: Case7, alt: "TratyVet" },
 				].map((cases, i) => (
 					<CarouselItem
 						index={i}
 						key={i.toString()}
-						className="md:basis-1/3 relative flex flex-col h-[70vh] sm:basis-1/2 lg:basis-1/3 xl:basis-1/4 items-center justify-end"
+						className="md:basis-1/3 relative flex flex-col h-[70vh] sm:basis-1/2 lg:basis-1/3 xl:basis-1/4 items-center justify-center"
 					>
 						<Image
 							src={cases.src}
 							alt={cases.alt}
-							className="object-contain h-full w-auto overflow-hidden"
+							className="object-contain h-auto w-auto overflow-hidden"
 						/>
+            <p className="p-2 max-h-2 text-base">{cases.alt}</p>
 					</CarouselItem>
 				))}
 			</CarouselContent>

@@ -46,7 +46,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
 				<header className="md:p-8 p-4 absolute z-50 top-0 w-full">
 					<div className="flex items-center justify-between max-w-screen-xl space-x-8 w-full mx-auto">
 						<Link href="/">
-							<Logo className="max-w-xs w-full h-auto" />
+							<Logo className="max-w-xs w-full h-auto max-md:max-w-60" />
 						</Link>
 						<Dialog>
 							<nav className="lg:space-x-8 w-full whitespace-nowrap font-bold flex lg:justify-center justify-between items-center max-lg:sr-only">
