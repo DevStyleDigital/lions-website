@@ -107,7 +107,8 @@ export const SendMailForm = () => {
 				<li>
 					<Link
 						className="bg-black rounded-full p-3 flex items-center justify-center"
-						href=""
+						href="https://api.whatsapp.com/send?phone=5515998146238"
+            target="_blank"
 					>
 						<WhatsApp className="w-6 h-6" />
 					</Link>
@@ -115,7 +116,8 @@ export const SendMailForm = () => {
 				<li>
 					<Link
 						className="bg-black rounded-full p-3 flex items-center justify-center"
-						href=""
+						href="https://www.facebook.com/lionsbrazil.ag"
+            target="_blank"
 					>
 						<Facebook className="w-6 h-6" />
 					</Link>
@@ -123,7 +125,8 @@ export const SendMailForm = () => {
 				<li>
 					<Link
 						className="bg-black rounded-full p-3 flex items-center justify-center"
-						href=""
+						href="https://www.instagram.com/lionsbrazil.ag/"
+            target="_blank"
 					>
 						<Instagram className="w-6 h-6" />
 					</Link>
@@ -131,7 +134,8 @@ export const SendMailForm = () => {
 				<li>
 					<Link
 						className="bg-black rounded-full p-3 flex items-center justify-center"
-						href=""
+						href="https://www.linkedin.com/in/lions-brazil-7289b8289/"
+            target="_blank"
 					>
 						<Linkedin className="w-6 h-6" />
 					</Link>
@@ -139,7 +143,8 @@ export const SendMailForm = () => {
 				<li>
 					<Link
 						className="bg-black rounded-full p-3 flex items-center justify-center"
-						href=""
+						href="mailto:contato@lionsbrazil.com.br"
+            target="_blank"
 					>
 						<Mail className="w-6 h-6" />
 					</Link>
