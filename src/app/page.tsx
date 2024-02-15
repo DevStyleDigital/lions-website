@@ -63,8 +63,8 @@ const Page = () => {
 						decidimos criar a <b>LIONS BR</b>
 						<br />
 						<br />
-						Uma agência que leva em seu nome suas principais características,
-						<b>domínio e segurança!</b> com o objetivo de trazer um novo olhar
+						Uma agência que leva em seu nome suas principais características,{' '}
+						<b>domínio e segurança!</b> Com o objetivo de trazer um novo olhar
 						para o mercado criativo.
 						<br />
 						<br />
