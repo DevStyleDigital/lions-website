@@ -1,20 +1,12 @@
+import { Logo } from "@/assets/Logo";
 import { WhatsApp } from "@/assets/whatsapp";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Menu } from "lucide-react";
 import type { Metadata } from "next";
-import loadFont from "next/font/local";
 import Link from "next/link";
 import Script from "next/script";
 import "./globals.css";
 import { Toast } from "./toast";
-import { Logo } from "@/assets/Logo";
-
-const rocgrotesk = loadFont({
-	src: [
-		{ path: "./rocgrotesk-bold.ttf", weight: "700", style: "normal" },
-		{ path: "./rocgrotesk-regular.ttf", weight: "400", style: "normal" },
-	],
-});
 
 export const metadata: Metadata = {
 	title: "Lions Brazil - Comunicação",
@@ -27,6 +19,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
 	return (
 		<html lang="pt-BR">
 			<head>
+        <link rel="stylesheet" href="https://use.typekit.net/ypi1mck.css"/>
 				<Script
 					id="gtm-script"
 					strategy="afterInteractive"
@@ -42,7 +35,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
 					}}
 				/>
 			</head>
-			<body className={`${rocgrotesk.className}`}>
+			<body className="tk-roc-grotesk-variable">
 				<header className="md:p-8 p-4 absolute z-50 top-0 w-full">
 					<div className="flex items-center justify-between max-w-screen-xl space-x-8 w-full mx-auto">
 						<Link href="/">
