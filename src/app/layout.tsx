@@ -104,11 +104,11 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
 					<section className="items-center max-w-7xl px-4 mx-auto justify-center w-full">
 						<p className="text-sm py-2 text-center">
 							<span className="text-primary-300">Copyright © </span>
-							<span className="text-orange-600">Lions 2024</span>
+							<span className="text-orange-700">Lions 2024</span>
 							<span className="text-primary-300"> | Distribuído por </span>
 							<Link
 								href="https://www.devstyle.com.br"
-								className="text-orange-600"
+								className="text-orange-700"
 							>
 								DevStyle
 							</Link>
