@@ -19,7 +19,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
 	return (
 		<html lang="pt-BR">
 			<head>
-        {/* <link rel="stylesheet" href="https://use.typekit.net/ypi1mck.css"/> */}
+        <link rel="stylesheet" href="https://use.typekit.net/ypi1mck.css"/>
 				<Script
 					id="gtm-script"
 					strategy="afterInteractive"
