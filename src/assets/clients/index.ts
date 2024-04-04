@@ -1,15 +1,15 @@
-import image1 from "./black-princess.png";
-import image2 from "./cacilds.png";
-import image3 from "./crystal.png";
-import image4 from "./grupo-petropolis.png";
-import image5 from "./invista-em-capela.png";
-import image6 from "./itaipava.png";
-import image7 from "./lets.png";
-import image8 from "./petra.png";
-import image9 from "./prefeitura-de-salto-de-pirapora.png";
-import image10 from "./rejoy.png";
-import image11 from "./traty-vet.png";
-import image12 from "./violada.png";
+import image1 from "./black-princess.webp";
+import image2 from "./cacilds.webp";
+import image3 from "./crystal.webp";
+import image4 from "./grupo-petropolis.webp";
+import image5 from "./invista-em-capela.webp";
+import image6 from "./itaipava.webp";
+import image7 from "./lets.webp";
+import image8 from "./petra.webp";
+import image9 from "./prefeitura-de-salto-de-pirapora.webp";
+import image10 from "./rejoy.webp";
+import image11 from "./traty-vet.webp";
+import image12 from "./violada.webp";
 
 export const clients = [
 	[image1, ""],

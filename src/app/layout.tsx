@@ -19,7 +19,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
 	return (
 		<html lang="pt-BR">
 			<head>
-        <link rel="stylesheet" href="https://use.typekit.net/ypi1mck.css"/>
+        {/* <link rel="stylesheet" href="https://use.typekit.net/ypi1mck.css"/> */}
 				<Script
 					id="gtm-script"
 					strategy="afterInteractive"
@@ -35,7 +35,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
 					}}
 				/>
 			</head>
-			<body className="tk-roc-grotesk-variable">
+			<body className="tk-roc-grotesk-variable overflow-x-hidden">
 				<header className="md:p-8 p-4 absolute z-50 top-0 w-full">
 					<div className="flex items-center justify-between max-w-screen-xl space-x-8 w-full mx-auto">
 						<Link href="/">

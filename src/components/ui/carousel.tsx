@@ -1,10 +1,5 @@
 "use client";
 
-import {
-	type EmblaCarouselType as CarouselApi,
-	type EmblaOptionsType as CarouselOptions,
-	type EmblaPluginType as CarouselPlugin,
-} from "embla-carousel";
 import useEmblaCarousel from "embla-carousel-react";
 import * as React from "react";
 
@@ -13,10 +8,10 @@ import { cn } from "@/utils/cn";
 import { flushSync } from "react-dom";
 
 type CarouselProps = {
-	opts?: CarouselOptions;
-	plugins?: CarouselPlugin[];
+	opts?: any;
+	plugins?: any[];
 	orientation?: "horizontal" | "vertical";
-	setApi?: (api: CarouselApi) => void;
+	setApi?: (api: any) => void;
 };
 
 type CarouselContextProps = {
@@ -89,7 +84,7 @@ const Carousel = React.forwardRef<
 		}, [api, setSlidesInView]);
 
 		const onSelect = React.useCallback(
-			(api: CarouselApi) => {
+			(api: any) => {
 				if (!api) {
 					return;
 				}
@@ -350,5 +345,4 @@ export {
 	CarouselItem,
 	CarouselNext,
 	CarouselPrevious,
-	type CarouselApi,
 };

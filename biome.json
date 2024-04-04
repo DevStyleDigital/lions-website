@@ -17,7 +17,10 @@
 		"include": ["src/*"],
 		"ignore": ["node_modules/*"],
 		"rules": {
-			"recommended": true
+			"recommended": true,
+      "suspicious": {
+        "noExplicitAny": "off"
+      }
 		}
 	}
 }
